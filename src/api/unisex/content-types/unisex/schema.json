@@ -1,0 +1,44 @@
+{
+  "kind": "singleType",
+  "collectionName": "unisexes",
+  "info": {
+    "singularName": "unisex",
+    "pluralName": "unisexes",
+    "displayName": "UNISEX",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "share.seo"
+    },
+    "danh_muc_con": {
+      "type": "component",
+      "repeatable": true,
+      "component": "header.danh-muc-con",
+      "required": false,
+      "max": 6
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "content_video": {
+      "type": "component",
+      "repeatable": false,
+      "component": "header.video"
+    }
+  }
+}

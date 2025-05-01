@@ -1,0 +1,87 @@
+{
+  "kind": "collectionType",
+  "collectionName": "don_hangs",
+  "info": {
+    "singularName": "don-hang",
+    "pluralName": "don-hangs",
+    "displayName": "Đơn hàng",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "ID_order": {
+      "type": "string",
+      "required": true
+    },
+    "date_order": {
+      "type": "date"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Chờ xác nhận",
+        "Đang đóng gói",
+        "Đang giao hàng",
+        "Đã giao",
+        "Đã huỷ",
+        "Chờ duyệt huỷ",
+        "Nháp"
+      ],
+      "default": "Nháp",
+      "required": true
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "share.item-order"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "address": {
+      "type": "text"
+    },
+    "note": {
+      "type": "text"
+    },
+    "feeDelivery": {
+      "type": "integer"
+    },
+    "voucher": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::voucher.voucher"
+    },
+    "finalAmount": {
+      "type": "float"
+    },
+    "payment_method": {
+      "type": "enumeration",
+      "enum": [
+        "Ngân hàng",
+        "Momo",
+        "Thanh toán khi nhận hàng"
+      ]
+    },
+    "price_not_reduced": {
+      "type": "float"
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    }
+  }
+}

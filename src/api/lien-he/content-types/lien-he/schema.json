@@ -1,0 +1,35 @@
+{
+  "kind": "singleType",
+  "collectionName": "lien_hes",
+  "info": {
+    "singularName": "lien-he",
+    "pluralName": "lien-hes",
+    "displayName": "Liên Hệ"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "share.seo"
+    },
+    "img": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "shop": {
+      "type": "component",
+      "repeatable": true,
+      "component": "share.link-shop"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_header_danh_muc_chi_tiets",
+  "info": {
+    "displayName": "Danh mục chi tiết",
+    "icon": "alien",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string",
+      "required": true
+    },
+    "san_phams": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::san-pham.san-pham"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "subTitle": {
+      "type": "string"
+    },
+    "isHome": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    }
+  }
+}

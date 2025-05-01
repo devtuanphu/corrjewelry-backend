@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_share_item_payments",
+  "info": {
+    "displayName": "itemPayment",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "text"
+    },
+    "note": {
+      "type": "text"
+    },
+    "imageBank": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "nameBank": {
+      "type": "string"
+    },
+    "numberBank": {
+      "type": "string"
+    },
+    "QR_code": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

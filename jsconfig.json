@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "module": "NodeNext", // Sử dụng NodeNext module
+    "moduleResolution": "NodeNext", // Cấu hình moduleResolution là NodeNext
+    "jsx": "react", // Bật JSX cho TypeScript
+    "strict": true, // Bật strict mode nếu cần
+    "esModuleInterop": true, // Hỗ trợ xuất nhập module
+    "skipLibCheck": true, // Bỏ qua kiểm tra thư viện
+    "forceConsistentCasingInFileNames": true
+  }
+}

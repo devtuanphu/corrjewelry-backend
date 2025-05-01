@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_share_why_items",
+  "info": {
+    "displayName": "why item",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

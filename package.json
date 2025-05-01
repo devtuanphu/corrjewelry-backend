@@ -1,0 +1,42 @@
+{
+  "name": "cms-corrjewelry",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi",
+    "deploy": "strapi deploy"
+  },
+  "dependencies": {
+    "@_sh/strapi-plugin-ckeditor": "^3.0.9",
+    "@strapi/design-system": "^1.19.0",
+    "@strapi/plugin-cloud": "4.25.19",
+    "@strapi/plugin-i18n": "4.25.19",
+    "@strapi/plugin-users-permissions": "4.25.19",
+    "@strapi/strapi": "4.25.19",
+    "axios": "^1.8.4",
+    "better-sqlite3": "8.6.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "5.3.4",
+    "slugify": "^1.6.6",
+    "socket.io": "^4.8.1",
+    "strapi-google-auth-with-token": "^3.0.2",
+    "strapi-plugin-slugify": "^2.3.8",
+    "styled-components": "5.3.3"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "35ac34e1-db05-43ca-80b9-4b5c32b16092"
+  },
+  "engines": {
+    "node": ">=18.0.0 <=20.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

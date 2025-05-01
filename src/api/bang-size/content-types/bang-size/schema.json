@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "bang_sizes",
+  "info": {
+    "singularName": "bang-size",
+    "pluralName": "bang-sizes",
+    "displayName": "Bảng size"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "share.seo"
+    },
+    "content": {
+      "type": "customField",
+      "options": {
+        "preset": "default"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    }
+  }
+}

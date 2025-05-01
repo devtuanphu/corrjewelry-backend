@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "thong_tin_chuyen_khoans",
+  "info": {
+    "singularName": "thong-tin-chuyen-khoan",
+    "pluralName": "thong-tin-chuyen-khoans",
+    "displayName": "Thông tin chuyển khoản"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "item": {
+      "type": "component",
+      "repeatable": true,
+      "component": "share.item-payment",
+      "max": 2
+    }
+  }
+}

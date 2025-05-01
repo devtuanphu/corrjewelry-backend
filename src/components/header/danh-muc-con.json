@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_header_danh_muc_cons",
+  "info": {
+    "displayName": "Danh mục con",
+    "icon": "alien",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "danh_muc_chi_tiet": {
+      "type": "component",
+      "repeatable": true,
+      "component": "header.danh-muc-chi-tiet"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "share.seo"
+    }
+  }
+}

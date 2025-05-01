@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_share_item_collections",
+  "info": {
+    "displayName": "ItemCollection",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "llink": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "san_phams": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::san-pham.san-pham"
+    }
+  }
+}

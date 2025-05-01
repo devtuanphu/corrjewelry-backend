@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_footer_socials",
+  "info": {
+    "displayName": "social",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "fb": {
+      "type": "string"
+    },
+    "insta": {
+      "type": "string"
+    },
+    "zalo": {
+      "type": "string"
+    },
+    "tiktok": {
+      "type": "string"
+    }
+  }
+}

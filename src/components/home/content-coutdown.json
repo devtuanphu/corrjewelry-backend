@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_home_content_coutdowns",
+  "info": {
+    "displayName": "content_coutdown",
+    "icon": "alien",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "percent": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    }
+  }
+}

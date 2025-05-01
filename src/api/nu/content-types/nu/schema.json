@@ -1,0 +1,43 @@
+{
+  "kind": "singleType",
+  "collectionName": "nus",
+  "info": {
+    "singularName": "nu",
+    "pluralName": "nus",
+    "displayName": "Nữ",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "share.seo"
+    },
+    "danh_muc_con": {
+      "type": "component",
+      "repeatable": true,
+      "component": "header.danh-muc-con",
+      "max": 6
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "content_video": {
+      "type": "component",
+      "repeatable": false,
+      "component": "header.video"
+    }
+  }
+}

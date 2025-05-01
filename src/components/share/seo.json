@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_share_seos",
+  "info": {
+    "displayName": "seo",
+    "icon": "alien",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "keyword": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_header_videos",
+  "info": {
+    "displayName": "video",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "avatar": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "linkVideo": {
+      "type": "text"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}

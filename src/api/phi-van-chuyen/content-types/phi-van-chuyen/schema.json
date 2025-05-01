@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "phi_van_chuyens",
+  "info": {
+    "singularName": "phi-van-chuyen",
+    "pluralName": "phi-van-chuyens",
+    "displayName": "Phí vận chuyển"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fee": {
+      "type": "integer"
+    }
+  }
+}

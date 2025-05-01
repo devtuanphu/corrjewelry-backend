@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "danh_muc_trang_chus",
+  "info": {
+    "singularName": "danh-muc-trang-chu",
+    "pluralName": "danh-muc-trang-chus",
+    "displayName": "Danh mục trang chủ",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "share.seo"
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "slug": {
+      "type": "string",
+      "required": true
+    },
+    "subTitle": {
+      "type": "string"
+    },
+    "avatar": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "san_phams": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::san-pham.san-pham"
+    }
+  }
+}

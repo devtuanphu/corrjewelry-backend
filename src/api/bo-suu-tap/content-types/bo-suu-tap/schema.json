@@ -1,0 +1,42 @@
+{
+  "kind": "singleType",
+  "collectionName": "bo_suu_taps",
+  "info": {
+    "singularName": "bo-suu-tap",
+    "pluralName": "bo-suu-taps",
+    "displayName": "Bộ sưu tập",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "share.seo"
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "content_video": {
+      "type": "component",
+      "repeatable": false,
+      "component": "header.video"
+    },
+    "item": {
+      "type": "component",
+      "repeatable": true,
+      "component": "share.item-collection"
+    }
+  }
+}

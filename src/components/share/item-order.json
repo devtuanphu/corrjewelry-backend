@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_share_item_orders",
+  "info": {
+    "displayName": "ItemOrder",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "amount": {
+      "type": "integer"
+    },
+    "san_pham": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::san-pham.san-pham"
+    },
+    "size": {
+      "type": "string"
+    },
+    "idCart": {
+      "type": "integer"
+    },
+    "price": {
+      "type": "float"
+    },
+    "noted": {
+      "type": "text"
+    }
+  }
+}

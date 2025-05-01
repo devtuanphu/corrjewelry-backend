@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_footer_infos",
+  "info": {
+    "displayName": "info",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "destinations": {
+      "type": "text"
+    }
+  }
+}

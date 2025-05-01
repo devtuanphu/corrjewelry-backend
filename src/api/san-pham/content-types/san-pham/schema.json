@@ -1,0 +1,110 @@
+{
+  "kind": "collectionType",
+  "collectionName": "san_phams",
+  "info": {
+    "singularName": "san-pham",
+    "pluralName": "san-phams",
+    "displayName": "Sản phẩm",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "share.seo",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "slug": {
+      "type": "string",
+      "required": true
+    },
+    "startAVG": {
+      "type": "string"
+    },
+    "amountComment": {
+      "type": "string"
+    },
+    "tag": {
+      "type": "string"
+    },
+    "style": {
+      "type": "text"
+    },
+    "detail": {
+      "type": "customField",
+      "options": {
+        "preset": "default"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "how_to_use": {
+      "type": "customField",
+      "options": {
+        "preset": "default"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "how_to_preserve": {
+      "type": "customField",
+      "options": {
+        "preset": "default"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "feedbacks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::feedback.feedback"
+    },
+    "isNewArrival": {
+      "type": "boolean",
+      "default": false
+    },
+    "isSaleHome": {
+      "type": "boolean",
+      "default": false
+    },
+    "isSalePage": {
+      "type": "boolean",
+      "default": false
+    },
+    "percentSale": {
+      "type": "integer"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "size": {
+      "type": "component",
+      "repeatable": true,
+      "component": "share.size"
+    },
+    "isPrenium": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "isBestSeller": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }
+  }
+}

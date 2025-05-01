@@ -1,0 +1,34 @@
+{
+  "kind": "singleType",
+  "collectionName": "countdowns",
+  "info": {
+    "singularName": "countdown",
+    "pluralName": "countdowns",
+    "displayName": "Countdown",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "percentSale": {
+      "type": "integer"
+    },
+    "subTitile": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "time": {
+      "type": "integer"
+    },
+    "defaultTim": {
+      "type": "integer"
+    }
+  }
+}

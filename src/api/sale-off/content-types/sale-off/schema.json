@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "sale_offs",
+  "info": {
+    "singularName": "sale-off",
+    "pluralName": "sale-offs",
+    "displayName": "Sale Off"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "share.seo"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "title_sales",
+  "info": {
+    "singularName": "title-sale",
+    "pluralName": "title-sales",
+    "displayName": "TitleSale"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "content1": {
+      "type": "string"
+    },
+    "content2": {
+      "type": "string"
+    }
+  }
+}
