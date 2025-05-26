@@ -17,7 +17,7 @@
       "repeatable": false,
       "component": "share.seo"
     },
-    "banner": {
+    "img_bestseller": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -28,15 +28,10 @@
         "audios"
       ]
     },
-    "img_bestseller": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "type": "media",
-      "multiple": false
+    "slide": {
+      "type": "component",
+      "repeatable": true,
+      "component": "share.img"
     }
   }
 }

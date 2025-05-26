@@ -21,10 +21,20 @@ module.exports = {
               id: userId,
             },
           },
-          populate: ["user", "items", "voucher"], // Populate thông tin liên quan
+          populate: {
+            user: true,
+            voucher: true,
+            items: {
+              populate: {
+                san_pham: {
+                  populate: ["images"], // lấy luôn images bên trong san_pham
+                },
+              },
+            },
+          },
           pagination: {
-            start: (page - 1) * pageSize, // Tính toán vị trí bắt đầu
-            limit: pageSize, // Số bản ghi trên mỗi trang
+            start: (page - 1) * pageSize,
+            limit: pageSize,
           },
         }
       );

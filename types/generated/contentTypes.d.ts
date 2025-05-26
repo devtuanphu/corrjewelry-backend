@@ -1115,7 +1115,6 @@ export interface ApiTrangChuTrangChu extends Schema.SingleType {
     draftAndPublish: true;
   };
   attributes: {
-    banner: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     createdAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::trang-chu.trang-chu',
@@ -1126,6 +1125,7 @@ export interface ApiTrangChuTrangChu extends Schema.SingleType {
     img_bestseller: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     publishedAt: Attribute.DateTime;
     seo: Attribute.Component<'share.seo'>;
+    slide: Attribute.Component<'share.img', true>;
     updatedAt: Attribute.DateTime;
     updatedBy: Attribute.Relation<
       'api::trang-chu.trang-chu',

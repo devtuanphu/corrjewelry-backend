@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_home_slides",
+  "info": {
+    "displayName": "slide"
+  },
+  "options": {},
+  "attributes": {
+    "item": {
+      "type": "component",
+      "repeatable": true,
+      "component": "share.img"
+    }
+  }
+}

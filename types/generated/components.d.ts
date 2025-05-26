@@ -127,6 +127,27 @@ export interface HomeContentCoutdown extends Schema.Component {
   };
 }
 
+export interface HomeSlide extends Schema.Component {
+  collectionName: 'components_home_slides';
+  info: {
+    displayName: 'slide';
+  };
+  attributes: {
+    item: Attribute.Component<'share.img', true>;
+  };
+}
+
+export interface ShareImg extends Schema.Component {
+  collectionName: 'components_share_imgs';
+  info: {
+    displayName: 'img';
+  };
+  attributes: {
+    alt: Attribute.Text;
+    image: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+  };
+}
+
 export interface ShareItemCollection extends Schema.Component {
   collectionName: 'components_share_item_collections';
   info: {
@@ -249,6 +270,8 @@ declare module '@strapi/types' {
       'header.danh-muc-con': HeaderDanhMucCon;
       'header.video': HeaderVideo;
       'home.content-coutdown': HomeContentCoutdown;
+      'home.slide': HomeSlide;
+      'share.img': ShareImg;
       'share.item-collection': ShareItemCollection;
       'share.item-order': ShareItemOrder;
       'share.item-payment': ShareItemPayment;
