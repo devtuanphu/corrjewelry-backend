@@ -44,7 +44,7 @@ module.exports = (plugin) => {
 
   plugin.controllers.user.addProductToNewCart = async (ctx) => {
     const { userId } = ctx.params; // Lấy userId từ URL
-    const { productId, amount, size, price } = ctx.request.body; // Lấy productId, amount, size, price từ body yêu cầu
+    const { productId, amount, size, price, noted } = ctx.request.body; // Lấy productId, amount, size, price từ body yêu cầu
 
     if (!userId || !productId || !amount || !size || !price) {
       return ctx.badRequest(
@@ -105,6 +105,7 @@ module.exports = (plugin) => {
         size: size, // Size của sản phẩm
         price: price || 0, // Giá của sản phẩm
         idCart: user.carts.length + 1, // Tạo ID cho mục giỏ hàng, có thể thay đổi cách tạo ID
+        noted: noted,
       };
 
       // Nếu người dùng chưa có giỏ hàng, khởi tạo mảng carts
@@ -191,6 +192,7 @@ module.exports = (plugin) => {
             size: cartItem.size, // Kích thước của sản phẩm
             price: cartItem.price || product.price, // Giá sản phẩm (lấy giá trong cart nếu có, nếu không lấy giá sản phẩm mặc định)
             idCart: cartItem.idCart,
+            noted: cartItem.noted,
           };
         })
       );
