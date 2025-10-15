@@ -3,6 +3,37 @@ module.exports = {
   async afterCreate(event) {
     const { result, params } = event;
 
+    const userDetail = await strapi.entityService.findOne(
+      "plugin::users-permissions.user", // Sử dụng đúng namespace và model
+      params.data?.user?.connect[0]?.id, // ID người dùng
+      { populate: ["carts"] } // Chỉ cần populate mảng carts
+    );
+    console.log(userDetail);
+
+    const token = process.env.TOKEN_BOT_ORDER;
+    const chatId = process.env.CHATID_GROUP_ORDER;
+    const bot = new TelegramBot(token, { polling: true });
+
+    const message = `
+      🎉 Đơn hàng mới được tạo!
+      👤 Khách hàng: ${userDetail.firstName} ${userDetail.lastName}
+      📝 Ghi chú: ${params.data.note || "Không có ghi chú"}
+      💰 Tổng giá trị đơn hàng: ${params.data.finalAmount.toLocaleString(
+        "vi-VN"
+      )}₫
+     
+      📅 Ngày đặt hàng: ${params.data.date_order}
+      🔢 Mã đơn hàng: ${params.data.ID_order}
+
+    `;
+
+    try {
+      await bot.sendMessage(chatId, message);
+      console.log("Đơn hàng đã được gửi đến Telegram");
+    } catch (error) {
+      console.error("Lỗi khi gửi tin nhắn đến Telegram:", error);
+    }
+
     try {
       // Lấy userId từ params
       const userId = params.data.user;
@@ -72,40 +103,7 @@ module.exports = {
   },
   async afterUpdate(event) {
     const { result, params } = event;
-    const previousPaymentMethod = event.result.payment_method; // Giá trị payment_method trước khi cập nhật
-    const currentPaymentMethod = params.data.payment_method; // Giá trị payment_method sau khi cập nhật
-
-    if (previousPaymentMethod !== currentPaymentMethod) {
-      const token = process.env.TOKEN_BOT_ORDER;
-      const chatId = process.env.CHATID_GROUP_ORDER;
-      const bot = new TelegramBot(token, { polling: true });
-
-      const message = `
-      🎉 Đơn hàng mới được tạo hoặc cập nhật!
-      👤 Khách hàng: ${params.data.firstName} ${params.data.lastName}
-      📞 Điện thoại: ${params.data.phone}
-      📧 Email: ${params.data.email}
-      🏠 Địa chỉ giao hàng: ${params.data.address}
-      📝 Ghi chú: ${params.data.note || "Không có ghi chú"}
-      💰 Tổng giá trị đơn hàng: ${params.data.finalAmount.toLocaleString(
-        "vi-VN"
-      )}₫
-      💳 Phương thức thanh toán: ${params.data.payment_method}
-      📅 Ngày đặt hàng: ${params.data.date_order}
-      🔢 Mã đơn hàng: ${params.data.ID_order}
-    `;
-
-      try {
-        await bot.sendMessage(chatId, message);
-        console.log("Đơn hàng đã được gửi đến Telegram");
-      } catch (error) {
-        console.error("Lỗi khi gửi tin nhắn đến Telegram:", error);
-      }
-    } else {
-      console.log(
-        "Không có thay đổi về phương thức thanh toán, không gửi tin nhắn."
-      );
-    }
+    console.log(params);
 
     // Kiểm tra nếu 'remember' là true
     if (params.data.remember) {
