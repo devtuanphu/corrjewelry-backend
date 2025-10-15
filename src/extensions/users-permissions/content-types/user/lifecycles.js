@@ -1,9 +1,30 @@
 const axios = require("axios");
+const TelegramBot = require("node-telegram-bot-api");
 
 module.exports = {
   async afterCreate(event) {
-    const { result } = event;
+    const { result, params } = event;
+    const token = process.env.TOKEN_BOT_USER;
+    const chatId = process.env.CHATID_GROUP_USER;
+    const bot = new TelegramBot(token, { polling: true });
+    console.log(params);
 
+    const message = `🎉 Thông tin người dùng mới:
+      👤 Họ và tên: ${params.data.firstName} ${params.data.lastName}
+      📧 Email: ${params.data.email}
+      🔑 Username: ${params.data.username}
+      📞 Điện thoại: ${params.data.phone || "Không có số điện thoại"}
+      🛑 Trạng thái: ${params.data.blocked ? "Đã bị khóa" : "Đang hoạt động"}
+      ✔️ Xác nhận tài khoản: ${
+        params.data.confirmed ? "Đã xác nhận" : "Chưa xác nhận"
+      }
+    `;
+    try {
+      await bot.sendMessage(chatId, message);
+      console.log("Đơn hàng đã được gửi đến Telegram");
+    } catch (error) {
+      console.error("Lỗi khi gửi tin nhắn đến Telegram:", error);
+    }
     if (result.provider === "google") {
       console.log("Đăng nhập với Google");
       console.log(result);
