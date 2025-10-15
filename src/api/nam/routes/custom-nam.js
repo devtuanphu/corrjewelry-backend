@@ -14,8 +14,8 @@ module.exports = {
       path: "/nams/danh-muc-con",
       handler: "custom-nam.findAllDanhMucCon",
       config: {
-        policies: [],
-        auth: false,
+        policies: [], // Bạn có thể thêm các policy nếu cần
+        middlewares: [], // Thêm middleware nếu cần
       },
     },
     {
@@ -23,8 +23,8 @@ module.exports = {
       path: "/nams/danh-muc-con-by-slug",
       handler: "custom-nam.findProductsByCategorySlug",
       config: {
-        policies: [],
-        auth: false,
+        policies: [], // Bạn có thể thêm các policy nếu cần
+        middlewares: [], // Thêm middleware nếu cần
       },
     },
     {
@@ -32,8 +32,8 @@ module.exports = {
       path: "/nams/chi-tiet-danh-muc-con",
       handler: "custom-nam.findCategoryBySlug",
       config: {
-        policies: [],
-        auth: false,
+        policies: [], // Bạn có thể thêm các policy nếu cần
+        middlewares: [], // Thêm middleware nếu cần
       },
     },
     {
@@ -41,8 +41,8 @@ module.exports = {
       path: "/nams/san-pham-danh-muc-chi-tiet",
       handler: "custom-nam.findProductsByCategoryDetailSlug",
       config: {
-        policies: [],
-        auth: false,
+        policies: [], // Bạn có thể thêm các policy nếu cần
+        middlewares: [], // Thêm middleware nếu cần
       },
     },
   ],

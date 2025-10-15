@@ -37,8 +37,6 @@ module.exports = {
               data: { time: remainingTime },
             });
             io.emit("countdown", remainingTime);
-
-            console.log(`Updated time: ${remainingTime} seconds`);
           } else {
             // Khi time bằng 0, reset lại giá trị time từ defaultTim
             countdown = await strapi.db

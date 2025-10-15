@@ -14,8 +14,8 @@ module.exports = {
       path: "/nus/danh-muc-con",
       handler: "custom-nu.findAllDanhMucCon",
       config: {
-        policies: [],
-        auth: false,
+        policies: [], // Bạn có thể thêm các policy nếu cần
+        middlewares: [], // Thêm middleware nếu cần
       },
     },
     {
@@ -23,8 +23,8 @@ module.exports = {
       path: "/nus/danh-muc-con-by-slug",
       handler: "custom-nu.findProductsByCategorySlug",
       config: {
-        policies: [],
-        auth: false,
+        policies: [], // Bạn có thể thêm các policy nếu cần
+        middlewares: [], // Thêm middleware nếu cần
       },
     },
     {
@@ -32,8 +32,8 @@ module.exports = {
       path: "/nus/chi-tiet-danh-muc-con",
       handler: "custom-nu.findCategoryBySlug",
       config: {
-        policies: [],
-        auth: false,
+        policies: [], // Bạn có thể thêm các policy nếu cần
+        middlewares: [], // Thêm middleware nếu cần
       },
     },
     {
@@ -41,8 +41,8 @@ module.exports = {
       path: "/nus/san-pham-danh-muc-chi-tiet",
       handler: "custom-nu.findProductsByCategoryDetailSlug",
       config: {
-        policies: [],
-        auth: false,
+        policies: [], // Bạn có thể thêm các policy nếu cần
+        middlewares: [], // Thêm middleware nếu cần
       },
     },
   ],
