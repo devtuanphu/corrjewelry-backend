@@ -21,8 +21,6 @@ module.exports = {
       💰 Tổng giá trị đơn hàng: ${params.data.finalAmount.toLocaleString(
         "vi-VN"
       )}₫
-     
-      📅 Ngày đặt hàng: ${params.data.date_order}
       🔢 Mã đơn hàng: ${params.data.ID_order}
 
     `;
