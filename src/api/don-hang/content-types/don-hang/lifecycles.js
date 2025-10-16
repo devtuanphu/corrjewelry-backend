@@ -1,36 +1,40 @@
 const TelegramBot = require("node-telegram-bot-api");
+const moment = require("moment");
+
 module.exports = {
   async afterCreate(event) {
     const { result, params } = event;
     console.log(params);
+    const formattedDate = moment(params.data.date_order).format("DD/MM/YYYY");
 
-    // const userDetail = await strapi.entityService.findOne(
-    //   "plugin::users-permissions.user", // Sử dụng đúng namespace và model
-    //   params.data?.user?.connect[0]?.id, // ID người dùng
-    //   { populate: ["carts"] } // Chỉ cần populate mảng carts
-    // );
+    const userDetail = await strapi.entityService.findOne(
+      "plugin::users-permissions.user", // Sử dụng đúng namespace và model
+      params.data?.user // ID người dùng
+    );
+    console.log(userDetail);
 
-    // const token = process.env.TOKEN_BOT_ORDER;
-    // const chatId = process.env.CHATID_GROUP_ORDER;
-    // const bot = new TelegramBot(token, { polling: true });
+    const token = process.env.TOKEN_BOT_ORDER;
+    const chatId = process.env.CHATID_GROUP_ORDER;
+    const bot = new TelegramBot(token, { polling: true });
 
-    // const message = `
-    //   🎉 Đơn hàng mới được tạo!
-    //   👤 Khách hàng: ${userDetail.firstName} ${userDetail.lastName}
-    //   📝 Ghi chú: ${params.data.note || "Không có ghi chú"}
-    //   💰 Tổng giá trị đơn hàng: ${params.data.finalAmount.toLocaleString(
-    //     "vi-VN"
-    //   )}₫
-    //   🔢 Mã đơn hàng: ${params.data.ID_order}
+    const message = `
+      🎉 Đơn hàng mới được tạo!
+      👤 Khách hàng: ${userDetail.firstName} ${userDetail.lastName}
+      📝 Ghi chú: ${params.data.note || "Không có ghi chú"}
+      💰 Tổng giá trị đơn hàng: ${params.data.finalAmount.toLocaleString(
+        "vi-VN"
+      )}₫
+      🔢 Mã đơn hàng: ${params.data.ID_order}
+      Ngày tạo đơn: ${formattedDate}
 
-    // `;
+    `;
 
-    // try {
-    //   await bot.sendMessage(chatId, message);
-    //   console.log("Đơn hàng đã được gửi đến Telegram");
-    // } catch (error) {
-    //   console.error("Lỗi khi gửi tin nhắn đến Telegram:", error);
-    // }
+    try {
+      await bot.sendMessage(chatId, message);
+      console.log("Đơn hàng đã được gửi đến Telegram");
+    } catch (error) {
+      console.error("Lỗi khi gửi tin nhắn đến Telegram:", error);
+    }
 
     try {
       // Lấy userId từ params
